@@ -1,0 +1,94 @@
+/* Variables */
+
+:root {
+  --bg-color: #fff;
+  --text-color: #735240;
+  --heart-color: #9fc7aa;
+}
+
+body,
+html {
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  gap: 4rem;
+  padding: 6rem;
+  height: 100vh;
+  box-sizing: border-box;
+  align-items: flex-start;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "heart picture"
+    "text picture";
+}
+
+.heart {
+  grid-area: heart;
+}
+
+.heart svg {
+  width: 4rem;
+  height: 4rem;
+  fill: var(--heart-color);
+}
+
+.picture {
+  grid-area: picture;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.picture img {
+  height: 80vh;
+  max-width: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.text {
+  grid-area: text;
+  font-family: Anctic;
+  font-size: 28px;
+  color: var(--text-color);
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heart"
+      "picture"
+      "text";
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .heart {
+    justify-self: center;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .picture {
+    justify-self: center;
+  }
+
+  .picture img {
+    height: 60vh;
+  }
+}
