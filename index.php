@@ -31,7 +31,7 @@
         <div class="picture">
             <img src="<?php echo $dir."/".$random_img ?>" alt="">
         </div>
-        <div class="text"><?php echo $random_quote ?></div>
+        <div class="text">Te quiero porque <?php echo $random_quote ?>.</div>
     </div>
 </body>
 
